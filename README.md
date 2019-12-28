@@ -1,8 +1,15 @@
-1. 类型还有 
-   string, 
+## 类型还有 
+
+### string,
+### 浮点型
+  
    [定长浮点型](https://solidity-cn.readthedocs.io/zh/develop/types.html#index-4)
-   数组，
-   枚举
+   
+## 数组
+`可变数组`和`不可变数组`
+   
+## 枚举
+   
 2. 关于external, public, internal, private可以给一张这样的图https://www.itread01.com/content/1546054868.html
 
 
