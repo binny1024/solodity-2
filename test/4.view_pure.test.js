@@ -24,6 +24,7 @@ contract("HelloWorld3", async (accounts) => {
     it("HelloWorld3.getAgeByPure() should be okay", async ()=>{
         let hw3 = await HelloWorld3.deployed();
         const res = await hw3.getAgeByPure.call();
+        console.log("res = "+res);
         assert.equal(res.toNumber(), 1, "getAgeByPure, HelloWorld3 age is NOT 1!");
     });
 

@@ -11,7 +11,7 @@ contract("HelloWorld4", async (accounts) => {
     
     it("should invoke a() successfully", async ()=>{
         let hw4 = await HelloWorld4.deployed();
-        const result = await hw4.a({from: accounts[1]});
+        const result = await hw4.a({from: accounts[2]});
         console.log('HelloWOrld4.a transaction detail is ', result)
     });
-})
+});
