@@ -31,7 +31,8 @@ import "../../math/SafeMath.sol";
 contract ERC20 is Context, IERC20 {
     using SafeMath for uint256;
 
-    mapping (address => uint256) private _balances;
+    // 键值对为,地址和余额的映射
+    mapping (address => uint256) internal _balances;
 
     mapping (address => mapping (address => uint256)) private _allowances;
 
@@ -172,8 +173,12 @@ contract ERC20 is Context, IERC20 {
     function _mint(address account, uint256 amount) internal {
         require(account != address(0), "ERC20: mint to the zero address");
 
+        //token total amount increase
         _totalSupply = _totalSupply.add(amount);
+        // at the same time , the mint account`s balance increase
         _balances[account] = _balances[account].add(amount);
+
+        // emit this event to  the outer listener
         emit Transfer(address(0), account, amount);
     }
 
